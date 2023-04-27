@@ -19,6 +19,7 @@ pipeline {
                 // Get some code from a GitHub repository
                git branch:"${params.BRANCH_GIT}",
                 url:"${params.URL_MOVIE}"
+                sh "change_java_version.sh" "${params.URL_MOVIE}"
             }
         }
         stage ('compile') {
