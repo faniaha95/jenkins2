@@ -10,7 +10,7 @@ pipeline {
         stage('Git') {
             steps {
                 // Get some code from a GitHub repository
-                branch: 'main'
+               git branch: 'main',
                 url: 'https://github.com/matthcol/movieapp_jdbc.git'
             }
         }
